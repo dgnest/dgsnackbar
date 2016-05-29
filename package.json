@@ -1,0 +1,26 @@
+{
+  "name": "dgsnackbar",
+  "version": "0.1.0",
+  "description": "dgsnackbar is a lightweight js plugin to create material design snackbar",
+  "author": "Jorge Estrada <jorge@dgnest.com>",
+  "keywords": [
+    "snackbar",
+    "material",
+    "design",
+    "dgnest"
+  ],
+  "license": "MIT",
+  "main": "lib/dgsnackbar.js",
+  "devDependencies": {
+    "del": "^1.1.0",
+    "gulp": "^3.8.11",
+    "gulp-compass": "^2.1.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-wrap": "^0.11.0"
+  }
+}
