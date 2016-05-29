@@ -1,0 +1,122 @@
+@import 'compass/css3';
+
+$max-width: 520px;
+$padding-dgsnackbar: 16px;
+$width-close-btn: 52px;
+
+.dgsnackbar-container {
+  z-index: 999999;
+  position: fixed;
+  display: block;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  box-sizing: border-box;
+}
+
+.dgsnackbar {
+  position: relative;
+  display: table;
+  align-items: center;
+  opacity: 0;
+  width: 100%;
+  min-height: 14px;
+  padding: $padding-dgsnackbar;
+  padding-right: $width-close-btn;
+  margin-top: 24px;
+  bottom: 0px;
+  background-color: #323232;
+  color: #FFF;
+  justify-content: space-between;
+  font-size: 15px;
+  line-height: 22px;
+  box-sizing: border-box;
+
+  @include box-shadow(0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24));
+
+  @include transition-property(opacity, bottom);
+  @include transition-duration(0.5s);
+  @include transition-timing-function(ease);
+
+  &.dgsnackbar-error {
+    background-color: #E74C3C;
+  }
+
+  &.dgsnackbar-success {
+    background-color: #1abc9c;
+  }
+
+  & > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .action {
+    background: inherit;
+    display: inline-block;
+    border: none;
+    font-size: inherit;
+    text-transform: uppercase;
+    color: #ffeb3b;
+    margin: 0px 0px 0px 24px;
+    padding: 0px;
+    min-width: min-content;
+  }
+
+  .dgsnackbar-icon {
+    font-size: 20px;
+    // padding-right: 8px;
+    width: 28px;
+  }
+
+  i, span {
+    color: #FFF;
+  }
+}
+
+.dgsnackbar__close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.62;
+  position: absolute;
+  right: $padding-dgsnackbar;
+
+  i {
+    padding: 0px;
+    font-size: 18px;
+  }
+
+  @include transition-property(opacity);
+  @include transition-duration(0.2s);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Desktop
+@media (min-width: $max-width + 100px) {
+  .dgsnackbar {
+    width: auto;
+    border-radius: 2px;
+    bottom: -100px;
+    padding-right: $padding-dgsnackbar;
+
+    span {
+      max-width: $max-width;
+    }
+  }
+
+  .dgsnackbar-container {
+    padding-bottom: $padding-dgsnackbar;
+    padding-left: $padding-dgsnackbar;
+    width: auto;
+  }
+
+  .dgsnackbar__close {
+    position: static;
+    margin-left: 18px;
+    right: 0px;
+  }
+}
