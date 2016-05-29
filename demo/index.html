@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dgsnackbar Demo</title>
+  <link rel="stylesheet" href="../dist/dgsnackbar.css">
+  <script src="https://use.fontawesome.com/0e43dd601c.js"></script>
+</head>
+<body>
+  <select name="type" id="dg-type">
+    <option value="normal">Normal</option>
+    <option value="success">Success</option>
+    <option value="error">Error</option>
+  </select>
+  <input id="dg-input" type="text" placeholder="Ingrese un mensaje">
+  <button id="dg-button">Crear</button>
+
+  <script src="../dist/dgsnackbar.js"></script>
+
+  <script type="text/javascript">
+    document.getElementById('dg-button').addEventListener('click', function() {
+      new dgsnackbar({
+        message: document.getElementById('dg-input').value,
+        type: document.getElementById('dg-type').value,
+      });
+    });
+  </script>
+</body>
+</html>
