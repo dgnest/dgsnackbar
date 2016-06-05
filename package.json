@@ -1,6 +1,6 @@
 {
   "name": "dgsnackbar",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "dgsnackbar is a lightweight js plugin to create material design snackbar",
   "author": "Jorge Estrada <jorge@dgnest.com>",
   "keywords": [
